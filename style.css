@@ -120,37 +120,29 @@
         gap: 0px;
         padding: 0px 10px;
     }
-
     .section-title {
         font-size: 26px;
         line-height: 32px;
     }
-
     .section-header p {
         font-size: 15px;
         line-height: 24px;
-
     }
-
     br {
         display: none;
     }
-
     .image-card-wrapper {
         min-width: 100%;
         /* Take up full width on smaller screens */
     }
-
     .slider-image-box {
         width: 100%;
     }
-
     .slider-container {
         padding-top: 0 !important;
         margin-top: 10px;
         /* Adjust padding for smaller screens */
     }
-
     .next-prev-buttons {
         position: absolute;
         top: 2.5%;
@@ -170,10 +162,8 @@
         right: 33.7%;
 
     }
-
     .next-prev-buttons button i {
         font-size: 24px;
         /* Adjust icon size for smaller screens */
     }
-
 }
