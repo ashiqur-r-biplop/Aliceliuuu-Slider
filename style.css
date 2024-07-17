@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: futuraPt;
+    src: url(./font/FuturaCyrillicMedium.ttf);
+}
+
+@font-face {
+    font-family: Helvetica-Neue;
+    src: url(./font/HelveticaNeueLight.otf);
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.section-title {
+    font-size: 34px;
+    font-weight: 500;
+    font-family: futuraPt;
+    line-height: 46px;
+    color: #1D1D1D;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.section-header p {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Helvetica-Neue;
+    color: #5E5E5E;
+    letter-spacing: 1px;
+    line-height: 26px;
+    padding: 5px 0;
+}
+
+/* slider */
+.slider-container {
+    max-width: 1560px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 48px;
+    position: relative;
+}
+
+.slider-content {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-card-wrapper {
+    position: relative;
+    min-width: 508px;
+    /* Ensure each card takes up the same space */
+}
+
+.image-title {
+    position: absolute;
+    bottom: 34px;
+    left: 22px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: futuraPt;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.slider-image-box {
+    width: 508px;
+}
+
+.slider-image-box img {
+    width: 100%;
+}
+
+.next-prev-buttons {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    color: black;
+    border-radius: 50%;
+    padding: 15px;
+    z-index: 1;
+    /* Ensure buttons are above slides */
+    right: 33.7%;
+}
+
+.next-prev-buttons button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.next-prev-buttons p {
+    font-weight: 500;
+    font-family: Helvetica-Neue;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media screen and (min-width:0px) and (max-width: 768px) {
+    .section-header {
+        gap: 0px;
+        padding: 0px 10px;
+    }
+
+    .section-title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+        line-height: 24px;
+
+    }
+
+    br {
+        display: none;
+    }
+
+    .image-card-wrapper {
+        min-width: 100%;
+        /* Take up full width on smaller screens */
+    }
+
+    .slider-image-box {
+        width: 100%;
+    }
+
+    .slider-container {
+        padding-top: 0 !important;
+        margin-top: 10px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .next-prev-buttons {
+        position: absolute;
+        top: 2.5%;
+        right: 2.5% !important;
+        transform: translate(auto);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        background: #fff;
+        color: black;
+        border-radius: 50%;
+        padding: 15px;
+        z-index: 1;
+        /* Ensure buttons are above slides */
+        right: 33.7%;
+
+    }
+
+    .next-prev-buttons button i {
+        font-size: 24px;
+        /* Adjust icon size for smaller screens */
+    }
+
+}
