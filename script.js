@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function goToSlide(index) {
     if (isAnimating) return;
     isAnimating = true;
-
     // Loop back to the beginning if at the last set of slides
     if (index >= totalSlides - 3) {
       currentSlideIndex = 0;
