@@ -73,13 +73,34 @@ document.addEventListener("DOMContentLoaded", function () {
     startAutoSlide();
   }
 
-  document
-    .querySelector(".next-prev-buttons button:first-child")
-    .addEventListener("click", slideLeft);
-  document
-    .querySelector(".next-prev-buttons button:last-child")
-    .addEventListener("click", slideRight);
+  // Select the next and prev buttons using their IDs
+  const nextButton = document.getElementById("next");
+  const prevButton = document.getElementById("prev");
 
+  nextButton.addEventListener("click", slideRight);
+  prevButton.addEventListener("click", slideLeft);
+
+  // Handle hover events to stop and restart auto slide
+  nextButton.addEventListener("mouseenter", () => {
+    clearInterval(autoSlideTimer); // Stop auto sliding on hover
+  });
+
+  prevButton.addEventListener("mouseenter", () => {
+    clearInterval(autoSlideTimer); // Stop auto sliding on hover
+  });
+
+  nextButton.addEventListener("mouseleave", () => {
+    resetAutoSlideTimer(); // Restart auto sliding when mouse leaves
+  });
+
+  prevButton.addEventListener("mouseleave", () => {
+    resetAutoSlideTimer(); // Restart auto sliding when mouse leaves
+  });
+
+  // Start auto slide on page load
+  startAutoSlide();
+
+  // Responsive handling
   window.addEventListener("resize", () => {
     updateSlideWidth();
     goToSlide(currentSlideIndex);
@@ -87,5 +108,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateSlideWidth();
   goToSlide(currentSlideIndex);
-  startAutoSlide();
 });
