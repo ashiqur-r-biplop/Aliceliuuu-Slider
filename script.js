@@ -42,11 +42,33 @@ document.addEventListener("DOMContentLoaded", function () {
         currentSlideIndex === 0
           ? currentSlideIndex * slideWidth
           : currentSlideIndex === 1
-          ? currentSlideIndex * slideWidth + 12
+          ? currentSlideIndex * slideWidth + 33
           : currentSlideIndex === 2
-          ? currentSlideIndex * slideWidth + 24
+          ? currentSlideIndex * slideWidth + 33 * 2
           : currentSlideIndex === 3
-          ? currentSlideIndex * slideWidth + 36
+          ? currentSlideIndex * slideWidth + 33 * 3
+          : currentSlideIndex === 4
+          ? currentSlideIndex * slideWidth + 33 * 4
+          : currentSlideIndex === 5
+          ? currentSlideIndex * slideWidth + 33 * 5
+          : currentSlideIndex === 6
+          ? currentSlideIndex * slideWidth + 33 * 6
+          : currentSlideIndex === 7
+          ? currentSlideIndex * slideWidth + 33 * 7
+          : currentSlideIndex === 8
+          ? currentSlideIndex * slideWidth + 33 * 8
+          : currentSlideIndex === 9
+          ? currentSlideIndex * slideWidth + 33 * 9
+          : currentSlideIndex === 10
+          ? currentSlideIndex * slideWidth + 33 * 10
+          : currentSlideIndex === 11
+          ? currentSlideIndex * slideWidth + 33 * 11
+          : currentSlideIndex === 12
+          ? currentSlideIndex * slideWidth + 33 * 12
+          : currentSlideIndex === 13
+          ? currentSlideIndex * slideWidth + 33 * 13
+          : currentSlideIndex === 14
+          ? currentSlideIndex * slideWidth + 33 * 14
           : currentSlideIndex * slideWidth
       }px)`;
     }
