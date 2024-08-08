@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalSlides = slides.length;
   let slideWidth = slides[0].offsetWidth;
   let currentSlideIndex = 1; // Start from the first real slide
-  let isAnimating = false; 
+  let isAnimating = false;  
   const autoSlideInterval = 3000;
   let autoSlideTimer;
 
